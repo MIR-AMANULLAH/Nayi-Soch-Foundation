@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donation Form - Nayi Soch Foundation</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  body {
+    background: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  header {
+    background: linear-gradient(90deg, #1abc9c, #16a085);
+    color: #fff;
+    padding: 20px 40px;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  header p {
+    font-size: 16px;
+    opacity: 0.9;
+  }
+
+  main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  section {
+    margin-bottom: 50px;
+  }
+
+  h2 {
+    text-align: center;
+    color: #1abc9c;
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: justify;
+  }
+
+  /* Form Styles */
+  .form-container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    max-width: 600px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+  }
+
+  .form-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  .form-container input,
+  .form-container textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+  }
+
+  .form-container input:focus,
+  .form-container textarea:focus {
+    border-color: #1abc9c;
+    outline: none;
+  }
+
+  .form-container button {
+    background: #1abc9c;
+    color: #fff;
+    padding: 16px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .form-container button:hover {
+    background: #16a085;
+    transform: translateY(-2px);
+  }
+
+  /* Info Cards */
+  .info-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  .card {
+    flex: 1 1 300px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+  }
+
+  .card h3 {
+    color: #1abc9c;
+    margin-bottom: 15px;
+  }
+
+  .card p {
+    font-size: 14px;
+    color: #555;
+  }
+
+  /* Footer */
+  footer {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  footer a {
+    color: #1abc9c;
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  /* ---------------- Responsive Design ---------------- */
+  @media(max-width:1024px){
+    .form-container {
+      padding: 30px;
+    }
+    .info-cards {
+      gap: 15px;
+    }
+  }
+
+  @media(max-width:768px){
+    header h1 {
+      font-size: 28px;
+    }
+
+    header p {
+      font-size: 14px;
+    }
+
+    .form-container {
+      padding: 25px;
+      max-width: 90%;
+    }
+
+    .info-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card {
+      width: 100%;
+    }
+  }
+
+  @media(max-width:480px){
+    header h1 {
+      font-size: 24px;
+    }
+
+    header p {
+      font-size: 13px;
+    }
+
+    .form-container input,
+    .form-container textarea {
+      padding: 12px;
+    }
+
+    .form-container button {
+      width: 100%;
+      padding: 14px;
+      font-size: 15px;
+    }
+  }
+
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Nayi Soch Foundation</h1>
+  <p>Empowering students through education and community support.</p>
+</header>
+
+<main>
+
+  <!-- Donation Form Section -->
+  <section id="donate">
+    <h2>Donate Books / Items</h2>
+    <div class="form-container">
+      <form action="https://formspree.io/f/mgvljzjp" method="POST">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+        
+         <label for="Contact">Contact Number</label>
+        <input type="number" id="number" name="number" placeholder="Your Number" required>
+
+
+        <label for="message">Donation Details</label>
+        <textarea id="message" name="message" placeholder="Books or items you wish to donate" rows="6" required></textarea>
+
+        <button type="submit">Submit Donation</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Additional Info Cards -->
+  <section id="extra-info">
+    <h2>Why Donate?</h2>
+    <div class="info-cards">
+      <div class="card">
+        <h3>Support Education</h3>
+        <p>Every book or educational item you donate helps a student achieve their goals and reduces the financial burden on their family.</p>
+      </div>
+      <div class="card">
+        <h3>Impact Community</h3>
+        <p>Your contribution helps strengthen the community by supporting students, families, and educational initiatives in need.</p>
+      </div>
+      <div class="card">
+        <h3>Environmental Benefit</h3>
+        <p>Donating gently used books and materials reduces waste and promotes sustainability by giving resources a second life.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p style="text-align:center;">Email: <a href="mailto:nayisochfoundation@gmail.com">nayisochfoundation@gmail.com</a> | Phone: +91 8899299699</p>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 Nayi Soch Foundation. All Rights Reserved. | <a href="#contact">Contact Us</a></p>
+</footer>
+
+</body>
+</html>
